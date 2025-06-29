@@ -46,10 +46,10 @@ jobs:
         restore-keys: |
           jbosstools-${{ runner.os }}-maven-
     # install webkit with gtk 3 for tests
-    - name: Install WebKit
-      run: |
-        sudo apt-get update -y
-        sudo apt-get install libwebkit2gtk-4.0-37
+    #- name: Install WebKit
+    #  run: |
+    #    sudo apt-get update -y
+    #    sudo apt-get install libwebkit2gtk-4.0-37
 
     # Build and compile using Maven
     - name: Build/Compile and run unit tests

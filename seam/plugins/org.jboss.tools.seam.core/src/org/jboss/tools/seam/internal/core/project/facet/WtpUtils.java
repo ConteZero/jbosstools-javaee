@@ -270,7 +270,7 @@ public class WtpUtils {
 		project.refreshLocal(IResource.DEPTH_INFINITE, monitor);
 		IJavaProject javaProject = JavaCore.create(project);
 		if (javaProject != null && javaProject.exists() && javaProject.isOpen() && javaProject instanceof JavaProject) {
-			Object object = ((JavaProject) javaProject).getElementInfo();
+			Object object = ((JavaProject) javaProject).getElementInfo(null);
 			if (object instanceof OpenableElementInfo) {
 				// copied from JavaProject.buildStructure(...)
 				OpenableElementInfo info = (OpenableElementInfo) object;
